@@ -32,8 +32,21 @@ services.</p>
 </div>
    </div>
 
-<div class="left">
-  </div>
+<div class='sidebar'>  
+     
+       <div>  
+       <button v-on:click="toggleSidebar" class="menu-button">
+       Menu
+       </button>
+       </div>
+       <ul class="side-nav" :class="isOpen ? 'open' : ''">
+         <li><nuxt-link to="/">Bio</nuxt-link></li>
+        <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
+        <li><nuxt-link to="/Contact"> Contact</nuxt-link></li>
+       </ul>
+     
+      
+   </div>  
     
  </div>  
   
@@ -42,12 +55,15 @@ services.</p>
 
 <script>
 export default {
-  data : function(){
-    return {}
+  data(){
+    return {
+      isOpen: false
+    }
   },
   methods :{
-    Details1 : function(){
-      this.$router.push("details1");
+    toggleSidebar() {
+      
+      this.isOpen = !this.isOpen  
     }
   } 
 }

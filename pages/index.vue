@@ -9,17 +9,19 @@
      Also you can leave me a message on <u>Contact Page</u></p>
    </div>
 
-   <div class='left'>     
-     <button v-on:click="toggleSidebar" class="menu-button">
+   <div class='sidebar'>  
+     
+       <div>  
+       <nuxt-link to="toggleSidebar" class="menu-button">
        Menu
-     </button>
-  <span class="nav"></span>
-  <ul class="side-nav" :class="isOpen ? 'open' : ''">
-    <li><nuxt-link to="/">Bio</nuxt-link></li>
-    <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
-    <li><nuxt-link to="/Contact"> Contact</nuxt-link></li>
-  </ul>
-  
+       </nuxt-link>
+       </div>
+       <ul class="side-nav" :class="isOpen ? 'open' : ''">
+         <li><nuxt-link to="/">Bio</nuxt-link></li>
+        <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
+        <li><nuxt-link to="/Contact"> Contact</nuxt-link></li>
+       </ul>
+     
       
    </div>  
  </div>  
