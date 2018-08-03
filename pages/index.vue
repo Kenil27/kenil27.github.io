@@ -12,9 +12,9 @@
    <div class='sidebar'>  
      
        <div>  
-       <nuxt-link to="toggleSidebar" class="menu-button">
+       <button v-on:click="toggleSidebar" class="menu-button">
        Menu
-       </nuxt-link>
+       </button>
        </div>
        <ul class="side-nav" :class="isOpen ? 'open' : ''">
          <li><nuxt-link to="/">Bio</nuxt-link></li>
