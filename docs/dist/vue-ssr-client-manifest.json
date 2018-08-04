@@ -3,26 +3,26 @@
   "all": [
     "vendor.6945bd7805f9f9d8e1f4.js",
     "img/Capture.a060667.jpg",
-    "pages_Contact.cda676a28b9ed54fd0c7.js",
+    "pages_Contact.5ff4cc0bb190c4012747.js",
     "layouts_default.a85bbcd833393324da5c.js",
-    "pages_index.b90c6b52c859f0515dc1.js",
-    "pages_Resume.4776bbd03d55141411b3.js",
-    "app.2981b68f37de9ab216ba.js",
-    "manifest.9e5b8182b603f10e7448.js",
+    "pages_index.21f0ca80331a7e0fa534.js",
+    "pages_Resume.ea2d85a6dafc52e92419.js",
+    "app.405599a19578332b585c.js",
+    "manifest.1fe90934e769d70aa835.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.9e5b8182b603f10e7448.js",
+    "manifest.1fe90934e769d70aa835.js",
     "vendor.6945bd7805f9f9d8e1f4.js",
-    "app.2981b68f37de9ab216ba.js"
+    "app.405599a19578332b585c.js"
   ],
   "async": [
-    "pages_Contact.cda676a28b9ed54fd0c7.js",
+    "pages_Contact.5ff4cc0bb190c4012747.js",
     "layouts_default.a85bbcd833393324da5c.js",
-    "pages_index.b90c6b52c859f0515dc1.js",
-    "pages_Resume.4776bbd03d55141411b3.js"
+    "pages_index.21f0ca80331a7e0fa534.js",
+    "pages_Resume.ea2d85a6dafc52e92419.js"
   ],
   "modules": {
     "38271260": [

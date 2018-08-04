@@ -2,7 +2,7 @@
  <div class='container'>
    <div class = 'text'>
      <h1>Hi, I am Kenil Shah</h1>
-     <p class='tag'> Web Designer & Development</p>
+     <p class='tag'> Web Designer & Developer</p>
      <p>I am a Software Engineer. Currently I work for L&T Infotech (LTI). </p>
      <p>Apart from technlogies, I share my interest in cricket, music and playing flute.</p>
      <p>If you want to connect with me, then you can follow me on <u>Facebook</u>, <u>LinkedIn</u>.
@@ -13,7 +13,7 @@
      
        <div>  
        <button v-on:click="toggleSidebar" class="menu-button">
-       Menu
+       MENU
        </button>
        </div>
        <ul class="side-nav" :class="isOpen ? 'open' : ''">

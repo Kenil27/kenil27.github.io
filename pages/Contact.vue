@@ -27,7 +27,7 @@
      
        <div>  
        <button v-on:click="toggleSidebar" class="menu-button">
-       Menu
+       MENU
        </button>
        </div>
        <ul class="side-nav" :class="isOpen ? 'open' : ''">

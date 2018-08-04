@@ -1,12 +1,12 @@
 <template>
  <div class='container'>
-   <div class = 'text'>
+    <div class = 'text'>
      
-     <nuxt-link to="/" class="home-button">Home
-     </nuxt-link>
-     <h1 class='cv'>Experience</h1>
-     <div>
-     <ul class='resume-list'>
+      <nuxt-link to="/" class="home-button">Home
+      </nuxt-link>
+      <h1 class='cv'>Experience</h1>
+    <div>
+        <ul class='resume-list'>
         <li>
           <h3>Software Developer, LTI</h3>
           <p class="date">June 2015 - Present</p>
@@ -24,29 +24,27 @@ services.</p>
           <div>
             <ul class="resume-list">
               <li>
-          <h3>Mumbai University</h3>
-          <p class="date">2011 - 2015</p>
-          <p>Bachelor of Engineering in Information Technology (I.T) (Mumbai university).</p>
-        </li>
-     </ul>
+                 <h3>Mumbai University</h3>
+                 <p class="date">2011 - 2015</p>
+                 <p>Bachelor of Engineering in Information Technology (I.T) (Mumbai university).</p>
+                </li>
+            </ul>
+          </div>
 </div>
-   </div>
 
-<div class='sidebar'>  
-     
-       <div>  
-       <button v-on:click="toggleSidebar" class="menu-button">
-       Menu
-       </button>
-       </div>
-       <ul class="side-nav" :class="isOpen ? 'open' : ''">
-         <li><nuxt-link to="/">Bio</nuxt-link></li>
-        <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
-        <li><nuxt-link to="/Contact"> Contact</nuxt-link></li>
-       </ul>
-     
-      
-   </div>  
+      <div class='sidebar'>  
+         <div>  
+           <button v-on:click="toggleSidebar" class="menu-button">
+            MENU
+           </button>
+          </div>
+
+          <ul class="side-nav" :class="isOpen ? 'open' : ''">
+            <li><nuxt-link to="/">Bio</nuxt-link></li>
+            <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
+            <li><nuxt-link to="/Contact"> Contact</nuxt-link></li>
+          </ul>      
+        </div>  
     
  </div>  
   
