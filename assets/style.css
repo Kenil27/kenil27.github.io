@@ -66,7 +66,7 @@ h3{
     color: #54554f;
 }
 .tag{
-    color: #54554f;
+    color: rgba(0,0,0,.8);
     font-size: 24px;
     margin: 0px 0px 20px 0px;
     line-height: 1.8;
@@ -90,7 +90,7 @@ p{
     background-color: transparent;
     letter-spacing: .1em;
     margin: 16px;
-    font-weight:500;
+    font-weight:bold;
 }
 button:hover,
 button:focus {
@@ -98,5 +98,5 @@ button:focus {
 }
 
 h1{
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }

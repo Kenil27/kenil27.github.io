@@ -68,5 +68,7 @@ export default {
 </script>
 
 <style >
-
+.cv{
+  margin-bottom: 3%;
+}
 </style>
