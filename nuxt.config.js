@@ -38,6 +38,7 @@ module.exports = {
   },
   css: [
     // CSS file in the project
+    'bootstrap/dist/css/bootstrap.css',
     '@/assets/style.css',
   ]
 }
