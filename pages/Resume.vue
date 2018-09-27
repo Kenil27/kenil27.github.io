@@ -1,5 +1,5 @@
 <template>
- <div class='container'>
+ <div class='container-fluid'>
     <div class = 'text'>
      
       <nuxt-link to="/" class="home-button">Home
@@ -9,7 +9,7 @@
         <ul class='resume-list'>
         <li>
           <h3>Software Developer, LTI</h3>
-          <p class="date">June 2015 - Present</p>
+          <p class="date">June 2015 - Sept. 2018</p>
           <p>Veolia Water (formerly Vivendi Water, originally Compagnie
 Générale des Eaux), is the water division of the French company
 Veolia Environment and the world’s largest supplier of water

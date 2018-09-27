@@ -1,12 +1,15 @@
 <template>
- <div class='container'>
+ <div class='container-fluid'>
    <div class = 'text'>
      <h1>Hi, I am Kenil Shah</h1>
      <p class='tag'> Web Designer & Developer</p>
      <p>I am a Software Engineer. Currently I work for L&T Infotech (LTI). </p>
      <p>Apart from technlogies, I share my interest in cricket, music and playing flute.</p>
-     <p>If you want to connect with me, then you can follow me on <u>Facebook</u>, <u>LinkedIn</u>.
-     Also you can leave me a message on <nuxt-link to="/Contact"><u>Contact Page</u></nuxt-link></p>
+     <p>You can follow me on <a href=
+     "https://angel.co/kenil27"><u>Angel.co</u></a>, <a href="https://www.linkedin.com/in/kenil-shah-934a8a90/">
+       <u>LinkedIn</u></a></p>
+     <p>ALso you can Contact me on my E-mail ID -<a href="mailto:kenilshah93@gmail.com">
+       kenilshah93@gmail.com</a></p>
    </div>
 
    <div class='sidebar'>  
@@ -17,10 +20,8 @@
        </button>
        </div>
        <ul class="side-nav" :class="isOpen ? 'open' : ''">
-         <li><nuxt-link to="/">Bio</nuxt-link></li>
+        <li><nuxt-link to="/">Bio</nuxt-link></li>
         <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
-        <li><nuxt-link to="/Contact"> Contact</nuxt-link></li>
-        <li><nuxt-link to="/Game"> Play Tic Tac Toe !</nuxt-link></li>
        </ul>
      
       
