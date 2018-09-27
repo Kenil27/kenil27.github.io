@@ -22,7 +22,6 @@
        <ul class="side-nav" :class="isOpen ? 'open' : ''">
         <li><nuxt-link to="/">Bio</nuxt-link></li>
         <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
-        <li><nuxt-link to="/Game">Play Tic Tac Toe !!!</nuxt-link></li>
        </ul>
      
       
