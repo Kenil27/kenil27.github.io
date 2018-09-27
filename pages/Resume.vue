@@ -8,7 +8,7 @@
     <div>
         <ul class='resume-list'>
         <li>
-          <h3>Software Developer, LTI</h3>
+          <h3>Software Engineer, LTI</h3>
           <p class="date">June 2015 - Sept. 2018</p>
           <p>Veolia Water (formerly Vivendi Water, originally Compagnie
 Générale des Eaux), is the water division of the French company
@@ -42,7 +42,6 @@ services.</p>
           <ul class="side-nav" :class="isOpen ? 'open' : ''">
             <li><nuxt-link to="/">Bio</nuxt-link></li>
             <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
-            <li><nuxt-link to="/Contact"> Contact</nuxt-link></li>
           </ul>      
         </div>  
     

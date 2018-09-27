@@ -3,27 +3,27 @@
   "all": [
     "vendor.7e6e4e3dca9a681479cc.js",
     "img/Capture.a060667.jpg",
-    "pages_Resume.51e3ed54db8ff8b452b9.js",
+    "pages_Resume.f89bac19cc2c4775694f.js",
     "pages_Contact.3de0e8abb771fda1af8d.js",
     "layouts_default.e88d91782cce7d8c4acc.js",
-    "pages_index.2f5be58b63ca166111a8.js",
+    "pages_index.6e1fac72f58dda0743ed.js",
     "pages_Game.4506f3250c26abb57ed5.js",
     "app.6acd1e1e62dc9afa2731.js",
-    "manifest.7a2fa721d974e3f82e8a.js",
+    "manifest.802996a0ad1f269c9f58.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.7a2fa721d974e3f82e8a.js",
+    "manifest.802996a0ad1f269c9f58.js",
     "vendor.7e6e4e3dca9a681479cc.js",
     "app.6acd1e1e62dc9afa2731.js"
   ],
   "async": [
-    "pages_Resume.51e3ed54db8ff8b452b9.js",
+    "pages_Resume.f89bac19cc2c4775694f.js",
     "pages_Contact.3de0e8abb771fda1af8d.js",
     "layouts_default.e88d91782cce7d8c4acc.js",
-    "pages_index.2f5be58b63ca166111a8.js",
+    "pages_index.6e1fac72f58dda0743ed.js",
     "pages_Game.4506f3250c26abb57ed5.js"
   ],
   "modules": {
