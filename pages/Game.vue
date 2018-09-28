@@ -25,28 +25,69 @@ export default {
   data() {
     return {
       items: [
+        "r0c0",
+        "r0c1",
+        "r0c2",
+        "r1c0",
         "r1c1",
         "r1c2",
-        "r1c3",
+        "r2c0",
         "r2c1",
-        "r2c2",
-        "r2c3",
-        "r3c1",
-        "r3c2",
-        "r3c3"
+        "r2c2"
       ],
       coins: {},
-      isXTurn: true
+      isXTurn: true,
     };
   },
   methods: {
+    checkWinner(currentRow, currentCol, player) {
+      
+      let isHorizontal = true
+      let isVertical = true
+      let isDiagonal = true
+      for (let i = 0; i < 3; i++) {
+        if (this.coins["r"+currentRow+"c"+i] !== player) {
+          isHorizontal = false
+        }
+      }
+
+      for (let j = 0; j < 3; j++) {
+        if (this.coins["r"+j+"c"+currentCol] !== player) {
+          isVertical = false
+        }
+      }
+      for(let k =0; k < 3; k++){
+        if(this.coins["r"+k+"c"+k] !== player)
+        isDiagonal = false
+      }
+      
+      for(let l =0;l<3;l++){
+        for(let m=0;m<3;m++){
+          if((l+m)%2 === 0)
+          if(this.coins['r'+l+'c'+m] !== player)
+          isDiagonal = false
+        }
+      }
+
+      return isHorizontal || isVertical || isDiagonal
+    },
     onCellClick(pos) {
       console.log("you clicked here:", this.coins[pos]);
       if (this.coins[pos]) {
           // do nothing
       } else {
-        this.setCellValue(pos, this.isXTurn ? "X" : "O");
+        const player = this.isXTurn ? "X" : "O"
+        this.setCellValue(pos, player);
+        const row = pos.substring(1, 2)
+        const col = pos.substring(3)
+        const result = this.checkWinner(row, col, player)
+        
+        // switch turn
         this.isXTurn = !this.isXTurn;
+
+        if (result) {
+          alert(`Hey ${player} wins`)
+        }
       }
     },
     setCellValue(pos, value) {
@@ -57,7 +98,7 @@ export default {
     },
     getCellValue(pos) {
       return this.coins[pos];
-    }
+    },
   }
 };
 </script>
