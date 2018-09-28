@@ -61,7 +61,13 @@ export default {
         isDiagonal = false
       }
       
-  
+      for(let l =0;l<3;l++){
+        for(let m=1;m<3;m++){
+          if((l+m)/2 === 0)
+          if(this.coins['r'+l+'c'+m] !== player)
+          isDiagonal = false
+        }
+      }
 
       return isHorizontal || isVertical || isDiagonal
     },
