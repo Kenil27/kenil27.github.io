@@ -65,7 +65,7 @@ export default {
         for(let m=0;m<3;m++){
           if((l+m)%2 === 0)
           if(this.coins['r'+l+'c'+m] !== player)
-          isDiagonal = false
+          isDiagnal = false
         }
       }
 
