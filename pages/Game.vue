@@ -45,6 +45,7 @@ export default {
       let isHorizontal = true
       let isVertical = true
       let isDiagonal = true
+      let isDiagonal2 = true
       for (let i = 0; i < 3; i++) {
         if (this.coins["r"+currentRow+"c"+i] !== player) {
           isHorizontal = false
@@ -56,20 +57,22 @@ export default {
           isVertical = false
         }
       }
-      for(let k =0; k < 3; k++){
-        if(this.coins["r"+k+"c"+k] !== player)
-        isDiagonal = false
-      }
-      
       for(let l =0;l<3;l++){
-        for(let m=1;m<3;m++){
-          if((l+m)/2 === 0)
-          if(this.coins['r'+l+'c'+m] !== player)
-          isDiagonal = false
+        for(let m=0;m<3;m++){
+          if(l===m)
+          {
+            if(this.coins["r"+l+"c"+m] !== player)
+            isDiagonal = false
+          }
+          else if((l !== m ) && ((l+m)%2 === 0))
+          {
+            if(this.coins["r"+l+"c"+m] !== player)
+            isDiagonal2 = false
+          }
         }
       }
 
-      return isHorizontal || isVertical || isDiagonal
+      return isHorizontal || isVertical || isDiagonal || isDiagonal2
     },
     onCellClick(pos) {
       console.log("you clicked here:", this.coins[pos]);
