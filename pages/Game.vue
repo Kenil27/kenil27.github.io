@@ -1,5 +1,5 @@
 <template>
-    <div class="container">  
+    <div class="container-fluid">  
         <div class='game'>
             <nuxt-link to="/" class="home-button">Bact to Home
             </nuxt-link>
@@ -15,6 +15,10 @@
                         {{getCellValue(item)}}
                     </div>
                     </div>
+                </div>
+                <h3 v-if="isGameOver">Game Over. {{isXTurn ? "X" : "O"}} wins</h3>
+                <div>
+                  <button v-if="isGameOver" @click="resetGame()">Restart Game</button>
                 </div>
         </div>
     </div> 
@@ -37,60 +41,61 @@ export default {
       ],
       coins: {},
       isXTurn: true,
+      isGameOver: false
     };
   },
   methods: {
     checkWinner(currentRow, currentCol, player) {
-      
-      let isHorizontal = true
-      let isVertical = true
-      let isDiagonal = true
-      let isDiagonal2 = true
+      let isHorizontal = true;
+      let isVertical = true;
+      let isDiagonal = true;
+      let isDiagonal2 = true;
       for (let i = 0; i < 3; i++) {
-        if (this.coins["r"+currentRow+"c"+i] !== player) {
-          isHorizontal = false
+        if (this.coins["r" + currentRow + "c" + i] !== player) {
+          isHorizontal = false;
         }
       }
 
       for (let j = 0; j < 3; j++) {
-        if (this.coins["r"+j+"c"+currentCol] !== player) {
-          isVertical = false
+        if (this.coins["r" + j + "c" + currentCol] !== player) {
+          isVertical = false;
         }
       }
-      for(let l =0;l<3;l++){
-        for(let m=0;m<3;m++){
-          if(l===m)
-          {
-            if(this.coins["r"+l+"c"+m] !== player)
-            isDiagonal = false
-          }
-          else if((l !== m ) && ((l+m)%2 === 0))
-          {
-            if(this.coins["r"+l+"c"+m] !== player)
-            isDiagonal2 = false
+      for (let l = 0; l < 3; l++) {
+        for (let m = 0; m < 3; m++) {
+          if (l === m) {
+            if (this.coins["r" + l + "c" + m] !== player) isDiagonal = false;
+          } else if (l !== m && (l + m) % 2 === 0) {
+            if (this.coins["r" + l + "c" + m] !== player) isDiagonal2 = false;
           }
         }
       }
 
-      return isHorizontal || isVertical || isDiagonal || isDiagonal2
+      return isHorizontal || isVertical || isDiagonal || isDiagonal2;
     },
+
     onCellClick(pos) {
+      if (this.isGameOver) {
+        return;
+      }
       console.log("you clicked here:", this.coins[pos]);
       if (this.coins[pos]) {
-          // do nothing
+        // do nothing
       } else {
-        const player = this.isXTurn ? "X" : "O"
+        const player = this.isXTurn ? "X" : "O";
         this.setCellValue(pos, player);
-        const row = pos.substring(1, 2)
-        const col = pos.substring(3)
-        const result = this.checkWinner(row, col, player)
+        const row = pos.substring(1, 2);
+        const col = pos.substring(3);
+        const result = this.checkWinner(row, col, player);
+
         
+        if (result) {
+          alert(`Hey, Congratulations ! ${player} wins`);
+          this.isGameOver = true;
+          return
+        }
         // switch turn
         this.isXTurn = !this.isXTurn;
-
-        if (result) {
-          alert(`Hey ${player} wins`)
-        }
       }
     },
     setCellValue(pos, value) {
@@ -102,12 +107,16 @@ export default {
     getCellValue(pos) {
       return this.coins[pos];
     },
+    resetGame(){
+    this.coins = ""
+    this.isGameOver = false
+  }
   }
 };
 </script>
 
 <style scoped>
-.container {
+.container-fluid {
   display: flex;
   justify-content: center;
 }

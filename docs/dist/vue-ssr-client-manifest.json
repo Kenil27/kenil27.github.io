@@ -7,15 +7,15 @@
     "pages_Contact.3de0e8abb771fda1af8d.js",
     "layouts_default.e88d91782cce7d8c4acc.js",
     "pages_index.909331ab2c79d614aa92.js",
-    "pages_Game.ff639bf9e77b572a94bc.js",
+    "pages_Game.f11dd740f958f8bbb359.js",
     "app.c987f86a033930a27e79.js",
-    "manifest.6d521ab7a4214bb4a3a9.js",
+    "manifest.56b158fed16094472b04.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.6d521ab7a4214bb4a3a9.js",
+    "manifest.56b158fed16094472b04.js",
     "vendor.7e6e4e3dca9a681479cc.js",
     "app.c987f86a033930a27e79.js"
   ],
@@ -24,7 +24,7 @@
     "pages_Contact.3de0e8abb771fda1af8d.js",
     "layouts_default.e88d91782cce7d8c4acc.js",
     "pages_index.909331ab2c79d614aa92.js",
-    "pages_Game.ff639bf9e77b572a94bc.js"
+    "pages_Game.f11dd740f958f8bbb359.js"
   ],
   "modules": {
     "38271260": [
