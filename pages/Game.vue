@@ -19,6 +19,7 @@
                 <h3 v-if="isGameOver">Game Over. {{isXTurn ? "X" : "O"}} wins</h3>
                 <div>
                   <button v-if="isGameOver" @click="resetGame()">Restart Game</button>
+                  <button v-if="isgameDraw" @click="drawGame()"> Start a New Game</button>
                 </div>
         </div>
     </div> 
@@ -41,7 +42,9 @@ export default {
       ],
       coins: {},
       isXTurn: true,
-      isGameOver: false
+      isGameOver: false,
+      isgameDraw: false,
+      count: 0
     };
   },
   methods: {
@@ -50,6 +53,7 @@ export default {
       let isVertical = true;
       let isDiagonal = true;
       let isDiagonal2 = true;
+
       for (let i = 0; i < 3; i++) {
         if (this.coins["r" + currentRow + "c" + i] !== player) {
           isHorizontal = false;
@@ -70,6 +74,12 @@ export default {
           }
         }
       }
+      if (this.coins["r" + currentRow + "c" + currentCol] === player)
+        this.count += 1;
+      if (this.count === 9) {
+        alert("Game Over. Result : Draw");
+        this.isgameDraw = true;
+      }
 
       return isHorizontal || isVertical || isDiagonal || isDiagonal2;
     },
@@ -88,11 +98,10 @@ export default {
         const col = pos.substring(3);
         const result = this.checkWinner(row, col, player);
 
-        
         if (result) {
           alert(`Hey, Congratulations ! ${player} wins`);
           this.isGameOver = true;
-          return
+          return;
         }
         // switch turn
         this.isXTurn = !this.isXTurn;
@@ -107,10 +116,14 @@ export default {
     getCellValue(pos) {
       return this.coins[pos];
     },
-    resetGame(){
-    this.coins = ""
-    this.isGameOver = false
-  }
+    resetGame() {
+      this.coins = "";
+      this.isGameOver = false;
+    },
+    drawGame() {
+      this.coins = "";
+      this.isgameDraw = false;
+    }
   }
 };
 </script>
