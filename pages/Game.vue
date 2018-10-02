@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">  
         <div class='game'>
-            <nuxt-link to="/" class="home-button">Bact to Home
+            <nuxt-link to="/" class="home-button">Back to Home
             </nuxt-link>
             <h3><u> Tic Tac Toe !!</u></h3>
                 <div class='r1'>
