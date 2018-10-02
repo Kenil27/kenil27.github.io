@@ -76,6 +76,8 @@ export default {
       }
       if (this.coins["r" + currentRow + "c" + currentCol] === player)
         this.count += 1;
+        if(isHorizontal || isVertical || isDiagonal || isDiagonal2)
+        return isHorizontal || isVertical || isDiagonal || isDiagonal2;
       if (this.count === 9) {
         alert("Game Over. Result : Draw");
         this.isgameDraw = true;
@@ -119,10 +121,12 @@ export default {
     resetGame() {
       this.coins = "";
       this.isGameOver = false;
+      this.count = 0;
     },
     drawGame() {
       this.coins = "";
       this.isgameDraw = false;
+      this.count = 0;
     }
   }
 };
