@@ -4,8 +4,9 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _adede726 = () => import('..\\pages\\Resume.vue' /* webpackChunkName: "pages_Resume" */).then(m => m.default || m)
-const _6e780fb2 = () => import('..\\pages\\Game.vue' /* webpackChunkName: "pages_Game" */).then(m => m.default || m)
 const _fc4348e0 = () => import('..\\pages\\Contact.vue' /* webpackChunkName: "pages_Contact" */).then(m => m.default || m)
+const _6e780fb2 = () => import('..\\pages\\Game.vue' /* webpackChunkName: "pages_Game" */).then(m => m.default || m)
+const _d431a44c = () => import('..\\pages\\marker.vue' /* webpackChunkName: "pages_marker" */).then(m => m.default || m)
 const _7fe9ed62 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
@@ -61,14 +62,19 @@ export function createRouter () {
 			name: "Resume"
 		},
 		{
+			path: "/Contact",
+			component: _fc4348e0,
+			name: "Contact"
+		},
+		{
 			path: "/Game",
 			component: _6e780fb2,
 			name: "Game"
 		},
 		{
-			path: "/Contact",
-			component: _fc4348e0,
-			name: "Contact"
+			path: "/marker",
+			component: _d431a44c,
+			name: "marker"
 		},
 		{
 			path: "/",

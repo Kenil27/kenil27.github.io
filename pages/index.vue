@@ -8,7 +8,7 @@
      <p>You can follow me on <a href=
      "https://angel.co/kenil27" target="_blank" rel="noopener">angel.co</a>, <a href="https://www.linkedin.com/in/kenil-shah-934a8a90/" 
      target="_blank" rel="noopener">LinkedIn</a></p>
-     <p>ALso you can Contact me on my E-mail ID -<a href="mailto:kenilshah93@gmail.com">
+     <p>Also you can contact me on my E-mail ID -<a href="mailto:kenilshah93@gmail.com">
        kenilshah93@gmail.com</a></p>
    </div>
 
@@ -22,6 +22,7 @@
             <li><nuxt-link to="/">Bio</nuxt-link></li>
             <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
             <li><nuxt-link to="/Game">Play Tic Tac Toe !!!</nuxt-link></li>
+            <li><nuxt-link to = "/marker">Indian Map</nuxt-link></li>
           </ul>
    </div>  
  </div> 
