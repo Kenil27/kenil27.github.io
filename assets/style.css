@@ -14,7 +14,7 @@
 }
 .sidebar{
     width: 50%;
-    background-image: url('~/static/Capture.jpg');
+    background-image: url('/kenil.jpg');
     background-position: center center;
     background-size: cover;
     z-index: 1;

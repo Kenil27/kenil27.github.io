@@ -8,8 +8,6 @@
     <nuxt-link class="error-link" to="/">Back to the home page</nuxt-link>
   </p>
   
-  <p class="description" v-else>An error occurred while rendering the page. Check developer tools console for details.</p>
-  
 
   <div class="logo">
     <a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt.js</a>
@@ -33,33 +31,12 @@ export default {
       ]
     }
   },
-  
-  // Only on debug mode
-  data () {
-    return {
-      mounted: false
-    }
-  },
-  mounted () {
-    this.mounted = true
-  },
-  created () {
-    console.error(this.error)
-  },
-  watch: {
-    error(newErr) {
-      if(newErr) {
-        console.error(newErr)
-      }
-    }
-  },
-  
   computed: {
     statusCode () {
       return (this.error && this.error.statusCode) || 500
     },
     message () {
-      return this.error.message || 'Error'
+      return this.error.message || `Error`
     }
   }
 }
@@ -79,7 +56,7 @@ export default {
   font-weight: 100 !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased; 
+  -webkit-font-smoothing: antialiased;
   position: absolute;
   top: 0;
   left: 0;
@@ -93,7 +70,7 @@ export default {
   font-size: 1.5rem;
   margin-top: 15px;
   color: #47494E;
-  margin-bottom: 8px; 
+  margin-bottom: 8px;
 }
 .__nuxt-error-page .description {
   color: #7F828B;
