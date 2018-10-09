@@ -5,6 +5,8 @@ import '..\\node_modules\\bootstrap\\dist\\css\\bootstrap.css'
 
 import '..\\assets\\style.css'
 
+import '..\\node_modules\\leaflet\\dist\\leaflet.css'
+
 
 import _6f6c098b from '..\\layouts\\default.vue'
 

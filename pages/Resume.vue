@@ -70,4 +70,7 @@ export default {
 .cv{
   margin-bottom: 3%;
 }
+.text{
+  overflow-y: scroll;
+}
 </style>

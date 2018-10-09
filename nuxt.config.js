@@ -36,6 +36,11 @@ module.exports = {
       }
     }
   },
+  modules: [
+
+    // With options
+    ['nuxt-leaflet', { ssr: false }]
+  ],
   css: [
     // CSS file in the project
     'bootstrap/dist/css/bootstrap.css',

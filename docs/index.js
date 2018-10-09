@@ -11,6 +11,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
+import nuxt_plugin_nuxtleaflet_5843311f from 'nuxt_plugin_nuxtleaflet_5843311f' // Source: ./nuxt-leaflet.js (ssr: false)
 
 
 // Component: <no-ssr>
@@ -133,6 +134,9 @@ async function createApp (ssrContext) {
   // Plugin execution
   
   
+  if (process.client) { 
+    if (typeof nuxt_plugin_nuxtleaflet_5843311f === 'function') await nuxt_plugin_nuxtleaflet_5843311f(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

@@ -2,7 +2,7 @@
  <div class='container-fluid'>
    <div class = 'text'>
      <h1>Hi, I am Kenil Shah</h1>
-     <p class='tag'> Web Designer & Developer</p>
+     <p class='tag'> Web Developer</p>
      <p>I am a Software Engineer. Currently I work for L&T Infotech (LTI). </p>
      <p>Apart from technlogies, I share my interest in cricket, music and playing flute.</p>
      <p>You can follow me on <a href=
@@ -22,7 +22,7 @@
             <li><nuxt-link to="/">Bio</nuxt-link></li>
             <li><nuxt-link to ="/Resume">Resume</nuxt-link></li>
             <li><nuxt-link to="/Game">Play Tic Tac Toe !!!</nuxt-link></li>
-      
+            <li><a href="/indian-map.html">Indian Map</a></li>
           </ul>
    </div>  
  </div> 

@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+}
+#statesDiv {
+    width: 50%;
+    height: 90vh;
+    padding: 1%;
+    overflow: auto;
+}
