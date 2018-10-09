@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
 .container {
     display: flex;
 }
@@ -6,4 +11,10 @@
     height: 90vh;
     padding: 1%;
     overflow: auto;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    color: #F73859;
 }
