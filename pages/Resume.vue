@@ -10,13 +10,20 @@
         <li>
           <h3>Software Engineer, LTI</h3>
           <p class="date">June 2015 - Sept. 2018</p>
-          <p>Veolia Water (formerly Vivendi Water, originally Compagnie
-Générale des Eaux), is the water division of the French company
-Veolia Environment and the world’s largest supplier of water
-services.</p>
-<p>Hands on Experience in CNC Tasks like Package Management, 
-  Maintenance of Servers, Path Code Installation, Security Management. 
-  Worked on Third Party Job Scheduler - One Automic</p>
+          <h5><b> Project : Veolia Water, France</b></h5>
+          <p class="date">July 2016 - Sept. 2018</p>
+          <p>Veolia Water is the water division of the French company
+          Veolia Environment and the world’s largest supplier of water
+          services.</p>
+          <p>Hands on Experience in CNC Tasks like Package Management, 
+            Maintenance of Servers, Path Code Installation, Security Management. 
+            Worked on Third Party Job Scheduler - One Automic</p>
+        </li>
+        <li>
+          <h5><b> Project: Statoil Fuel and Retail</b></h5>
+          <p class="date">June 2015 - June 2016</p>
+          <p>Role : Production Support (JD Edwards CNC)<br> Responsible for Restart and Maintaining of JDE Servers
+          . Successfully implemented MRT feature of One Automic for job monitoring</p>
         </li>
         </ul>
           </div>
@@ -52,25 +59,21 @@ services.</p>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
       isOpen: false
-    }
+    };
   },
-  methods :{
+  methods: {
     toggleSidebar() {
-      
-      this.isOpen = !this.isOpen  
+      this.isOpen = !this.isOpen;
     }
-  } 
-}
+  }
+};
 </script>
 
 <style >
-.cv{
+.cv {
   margin-bottom: 3%;
-}
-.text{
-  overflow-y: scroll;
 }
 </style>

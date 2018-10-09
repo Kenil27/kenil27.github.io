@@ -1,9 +1,9 @@
 <template>
     <div class="container-fluid">  
         <div class='game'>
-            <nuxt-link to="/" class="home-button">Back to Home
+            <nuxt-link to="/" class="home-button"><b> Back to Home</b>
             </nuxt-link>
-            <h3><u> Tic Tac Toe !!</u></h3>
+            <h2><u><b> Tic Tac Toe !!</b></u></h2>
                 <div class='r1'>
                     <div class="row">
                     <div 
@@ -16,10 +16,11 @@
                     </div>
                     </div>
                 </div>
-                <h3 v-if="isGameOver">Game Over. {{isXTurn ? "X" : "O"}} wins</h3>
-                <div>
-                  <button v-if="isGameOver" @click="resetGame()">Restart Game</button>
-                  <button v-if="isgameDraw" @click="drawGame()"> Start a New Game</button>
+                
+                <div class="display-result">
+                  <h3 v-if="isGameOver">Game Over. {{isXTurn ? "X" : "O"}} wins</h3>
+                  <button class='reset' v-if="isGameOver" @click="resetGame()">Restart Game</button>
+                  <button class='reset' v-if="isgameDraw" @click="drawGame()"> Start a New Game</button>
                 </div>
         </div>
     </div> 
@@ -76,7 +77,7 @@ export default {
       }
       if (this.coins["r" + currentRow + "c" + currentCol] === player)
         this.count += 1;
-        if(isHorizontal || isVertical || isDiagonal || isDiagonal2)
+      if (isHorizontal || isVertical || isDiagonal || isDiagonal2)
         return isHorizontal || isVertical || isDiagonal || isDiagonal2;
       if (this.count === 9) {
         alert("Game Over. Result : Draw");
@@ -136,12 +137,19 @@ export default {
 .container-fluid {
   display: flex;
   justify-content: center;
+  background-image: url("/x0.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+h2 {
+  text-align: center;
+  padding: 2%;
 }
 .game {
   margin: 2%;
 }
 .r1 {
-  background-color: rgb(187, 173, 173);
+  background-color: white;
   display: flex;
 }
 .t--cell {
@@ -149,5 +157,20 @@ export default {
   width: 100px;
   height: 100px;
   text-align: center;
+}
+.display-result{
+  text-align: center;
+}
+.reset{
+  background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
 }
 </style>
