@@ -39,11 +39,17 @@ module.exports = {
   modules: [
 
     // With options
-    ['nuxt-leaflet', { ssr: false }]
+    ['nuxt-leaflet', { ssr: false }] ,
+
+    // Simple usage
+   ['@nuxtjs/google-analytics', {
+    id: 'UA-131736992-2'
+  }]
+
   ],
   css: [
     // CSS file in the project
     'bootstrap/dist/css/bootstrap.css',
     '@/assets/style.css',
-  ]
+  ],
 }

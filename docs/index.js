@@ -11,6 +11,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 
 /* Plugins */
+import nuxt_plugin_googleanalytics_229d3b80 from 'nuxt_plugin_googleanalytics_229d3b80' // Source: ./google-analytics.js (ssr: false)
 import nuxt_plugin_nuxtleaflet_5843311f from 'nuxt_plugin_nuxtleaflet_5843311f' // Source: ./nuxt-leaflet.js (ssr: false)
 
 
@@ -135,6 +136,7 @@ async function createApp (ssrContext) {
   
   
   if (process.client) { 
+    if (typeof nuxt_plugin_googleanalytics_229d3b80 === 'function') await nuxt_plugin_googleanalytics_229d3b80(app.context, inject)
     if (typeof nuxt_plugin_nuxtleaflet_5843311f === 'function') await nuxt_plugin_nuxtleaflet_5843311f(app.context, inject)
   }
 
